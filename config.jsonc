@@ -29,7 +29,7 @@
     "custom/weather": {
         "exec": "/etc/xdg/waybar/scripts/weather.sh",
         "interval": 900,  // Update every 15 minutes (weather doesn't change that often)
-        "format": "{}",   // Use the JSON output directly
+        "format": "{}",
     }
 
 
