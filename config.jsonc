@@ -1,0 +1,36 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+	"custom/weather",
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "clock",
+    ],
+    "clock": {
+    "interval": 60,
+    "format": "{:%A, %b. %d, %Y %H:%M}",
+    "max-length": 30
+},
+
+    "custom/username": {
+    "exec": "/etc/xdg/waybar/scripts/username.sh",
+    "interval": 30,
+    "format": "{}"
+},
+
+    "custom/weather": {
+        "exec": "/etc/xdg/waybar/scripts/weather.sh",
+        "interval": 900,  // Update every 15 minutes (weather doesn't change that often)
+        "format": "{}",   // Use the JSON output directly
+    }
+
+
+}
